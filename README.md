@@ -1,6 +1,6 @@
 # Exo_CP
 
-Exo_CP is a project aiming to study the conception of a lower limbs exoskeleton to correct the gait of a person affected with spastic Cerebral Palsy. It was submitted to ISMR 2023, and is introduced on <a=href"https://gepettoweb.laas.fr/articles/bonnefoy\_otmani__2023.html"> this webpage</a>.
+Exo_CP is a project aiming to study the conception of a lower limbs exoskeleton to correct the gait of a person affected with spastic Cerebral Palsy. It was submitted to ISMR 2023, for more details please see <a href="https://gepettoweb.laas.fr/articles/bonnefoy\_otmani__2023.html">this webpage<\a>.
 
 
 ## Main codes: 
