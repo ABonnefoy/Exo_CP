@@ -1,0 +1,355 @@
+<robot name="onshape">
+<link name="hanche">
+<visual>
+<origin xyz="0.0153735 0.00702117 0.0280779" rpy="0 -0 1.5708" />
+<geometry>
+<mesh filename="package:///hanche.stl"/>
+</geometry>
+<material name="hanche_material">
+<color rgba="0.615686 0.811765 0.929412 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0.0153735 0.00702117 0.0280779" rpy="0 -0 1.5708" />
+<geometry>
+<mesh filename="package:///hanche.stl"/>
+</geometry>
+<material name="hanche_material">
+<color rgba="0.615686 0.811765 0.929412 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="0.0153735 0.00702117 0.0280779" rpy="0 0 0"/>
+<mass value="12.7765" />
+<inertia ixx="0.0500008" ixy="1.80602e-18"  ixz="0" iyy="0.0239733" iyz="0" izz="0.0669875" />
+</inertial>
+</link>
+
+<link name="millieu_hanche">
+<inertial>
+<origin xyz="0 0 0" rpy="0 0 0" />
+<mass value="1e-9" />
+<inertia ixx="0" ixy="0" ixz="0" iyy="0" iyz="0" izz="0" />
+</inertial>
+</link>
+<joint name="millieu_hanche_frame" type="fixed">
+<origin xyz="0.0153735 0.00702117 -0.000422116" rpy="1.32802e-16 1.36846e-48 6.93889e-17" />
+<parent link="hanche" />
+<child link="millieu_hanche" />
+<axis xyz="0 0 0"/>
+</joint>
+
+<link name="rotule_1_hanche">
+<inertial>
+<origin xyz="-7.61461e-08 0.00180673 0.00804272" rpy="0 0 0"/>
+<mass value="0.0127968" />
+<inertia ixx="4.07362e-07" ixy="-2.99304e-12"  ixz="-4.19742e-12" iyy="2.80094e-07" iyz="-4.52514e-08" izz="2.93771e-07" />
+</inertial>
+</link>
+
+<link name="rotule_2_hanche">
+<inertial>
+<origin xyz="0 -2.13606e-18 -0.00733523" rpy="0 0 0"/>
+<mass value="0.0161793" />
+<inertia ixx="1.66736e-06" ixy="1.34893e-86"  ixz="0" iyy="1.05646e-06" iyz="0" izz="1.38717e-06" />
+</inertial>
+</link>
+
+<link name="cuisse">
+<visual>
+<origin xyz="-0.1045 -1.73472e-17 0.015" rpy="1.5708 -8.2173e-33 1.95494e-49" />
+<geometry>
+<mesh filename="package:///cuisse.stl"/>
+</geometry>
+<material name="cuisse_material">
+<color rgba="0.917647 0.917647 0.917647 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.1045 -1.73472e-17 0.015" rpy="1.5708 -8.2173e-33 1.95494e-49" />
+<geometry>
+<mesh filename="package:///cuisse.stl"/>
+</geometry>
+<material name="cuisse_material">
+<color rgba="0.917647 0.917647 0.917647 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="2.16347e-08 0.166085 0.015" rpy="0 0 0"/>
+<mass value="2.01654" />
+<inertia ixx="0.0199855" ixy="6.05767e-09"  ixz="-6.18535e-11" iyy="0.00025864" iyz="4.80268e-09" izz="0.0199382" />
+</inertial>
+</link>
+
+<link name="tibias">
+<visual>
+<origin xyz="0 0.33 -0.1045" rpy="-1.5708 -1.5708 0" />
+<geometry>
+<mesh filename="package:///tibias.stl"/>
+</geometry>
+<material name="tibias_material">
+<color rgba="0.768627 0.886275 0.952941 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="0 0.33 -0.1045" rpy="-1.5708 -1.5708 0" />
+<geometry>
+<mesh filename="package:///tibias.stl"/>
+</geometry>
+<material name="tibias_material">
+<color rgba="0.768627 0.886275 0.952941 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="2.28669e-17 -0.16 1.38778e-17" rpy="0 0 0"/>
+<mass value="1.97092" />
+<inertia ixx="0.0185968" ixy="0"  ixz="-8.14519e-80" iyy="0.000252591" iyz="0" izz="0.0186441" />
+</inertial>
+</link>
+
+<link name="rotule_pied">
+<inertial>
+<origin xyz="-3.41639e-17 -8.83451e-09 -7.49448e-05" rpy="0 0 0"/>
+<mass value="0.0163452" />
+<inertia ixx="9.19213e-07" ixy="-3.56476e-12"  ixz="-1.4259e-12" iyy="9.15132e-07" iyz="1.00971e-70" izz="2.2153e-07" />
+</inertial>
+</link>
+
+<link name="pied">
+<visual>
+<origin xyz="-0.0970689 0.0465 -0.189996" rpy="1.5708 4.55787e-64 0" />
+<geometry>
+<mesh filename="package:///pied.stl"/>
+</geometry>
+<material name="pied_material">
+<color rgba="0.498039 0.498039 0.498039 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0970689 0.0465 -0.189996" rpy="1.5708 4.55787e-64 0" />
+<geometry>
+<mesh filename="package:///pied.stl"/>
+</geometry>
+<material name="pied_material">
+<color rgba="0.498039 0.498039 0.498039 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="1.38778e-17 0.00897571 0.0698467" rpy="0 0 0"/>
+<mass value="1.52851" />
+<inertia ixx="0.00418338" ixy="1.05778e-83"  ixz="-1.90673e-66" iyy="0.00459938" iyz="-3.279e-06" izz="0.00049942" />
+</inertial>
+</link>
+
+<joint name="roulis_cheville_gauche" type="revolute">
+<origin xyz="0 3e-05 -7.5e-05" rpy="1.5708 -1.5708 0" />
+<parent link="rotule_pied" />
+<child link="pied" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="tangage_cheville_gauche" type="revolute">
+<origin xyz="2.77556e-17 -0.32 0" rpy="-3.14159 -1.25442e-48 1.5708" />
+<parent link="tibias" />
+<child link="rotule_pied" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="genoux_gauche" type="revolute">
+<origin xyz="-1.38778e-17 0.33 0.015" rpy="-3.14159 -1.5708 0" />
+<parent link="cuisse" />
+<child link="tibias" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="pivotx_hanche_gauche" type="revolute">
+<origin xyz="1.11022e-16 -0.0155 -0.01" rpy="-1.5708 -1.10053e-32 1.15648e-16" />
+<parent link="rotule_2_hanche" />
+<child link="cuisse" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="pivotz_hanche_gauche" type="revolute">
+<origin xyz="1.73472e-18 0.01 0.01" rpy="-1.5708 -1.5708 0" />
+<parent link="rotule_1_hanche" />
+<child link="rotule_2_hanche" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="pivoty_hanche_gauche" type="revolute">
+<origin xyz="0.0153735 0.101521 0.0280779" rpy="1.5708 -0 -3.14159" />
+<parent link="hanche" />
+<child link="rotule_1_hanche" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<link name="rotule_1_hanche_2">
+<inertial>
+<origin xyz="-7.61461e-08 -0.00180673 -0.00804272" rpy="0 0 0"/>
+<mass value="0.0127968" />
+<inertia ixx="4.07362e-07" ixy="2.99304e-12"  ixz="4.19742e-12" iyy="2.80094e-07" iyz="-4.52514e-08" izz="2.93771e-07" />
+</inertial>
+</link>
+
+<link name="rotule_2_hanche_2">
+<inertial>
+<origin xyz="0 -2.13606e-18 -0.00733523" rpy="0 0 0"/>
+<mass value="0.0161793" />
+<inertia ixx="1.66736e-06" ixy="-1.67868e-38"  ixz="0" iyy="1.05646e-06" iyz="0" izz="1.38717e-06" />
+</inertial>
+</link>
+
+<link name="cuisse_2">
+<visual>
+<origin xyz="-0.1045 1.73472e-17 -0.015" rpy="-1.5708 -2.05433e-33 0" />
+<geometry>
+<mesh filename="package:///cuisse.stl"/>
+</geometry>
+<material name="cuisse_material">
+<color rgba="0.917647 0.917647 0.917647 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.1045 1.73472e-17 -0.015" rpy="-1.5708 -2.05433e-33 0" />
+<geometry>
+<mesh filename="package:///cuisse.stl"/>
+</geometry>
+<material name="cuisse_material">
+<color rgba="0.917647 0.917647 0.917647 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="2.16347e-08 -0.166085 -0.015" rpy="0 0 0"/>
+<mass value="2.01654" />
+<inertia ixx="0.0199855" ixy="-6.05767e-09"  ixz="6.18535e-11" iyy="0.00025864" iyz="4.80268e-09" izz="0.0199382" />
+</inertial>
+</link>
+
+<link name="tibias_2">
+<visual>
+<origin xyz="-1.73472e-18 -0.33 0.1045" rpy="1.5708 1.5708 0" />
+<geometry>
+<mesh filename="package:///tibias.stl"/>
+</geometry>
+<material name="tibias_material">
+<color rgba="0.768627 0.886275 0.952941 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-1.73472e-18 -0.33 0.1045" rpy="1.5708 1.5708 0" />
+<geometry>
+<mesh filename="package:///tibias.stl"/>
+</geometry>
+<material name="tibias_material">
+<color rgba="0.768627 0.886275 0.952941 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="2.11322e-17 0.16 -2.77556e-17" rpy="0 0 0"/>
+<mass value="1.97092" />
+<inertia ixx="0.0185968" ixy="2.98515e-43"  ixz="6.59574e-45" iyy="0.000252591" iyz="4.34471e-45" izz="0.0186441" />
+</inertial>
+</link>
+
+<link name="rotule_pied_2">
+<inertial>
+<origin xyz="-1.45186e-16 8.83451e-09 7.49448e-05" rpy="0 0 0"/>
+<mass value="0.0163452" />
+<inertia ixx="9.19213e-07" ixy="3.56476e-12"  ixz="1.4259e-12" iyy="9.15132e-07" iyz="6.79743e-50" izz="2.2153e-07" />
+</inertial>
+</link>
+
+<link name="pied_2">
+<visual>
+<origin xyz="-0.0970689 0.0465 -0.189996" rpy="1.5708 1.54669e-43 3.02443e-43" />
+<geometry>
+<mesh filename="package:///pied.stl"/>
+</geometry>
+<material name="pied_material">
+<color rgba="0.498039 0.498039 0.498039 1.0"/>
+</material>
+</visual>
+<collision>
+<origin xyz="-0.0970689 0.0465 -0.189996" rpy="1.5708 1.54669e-43 3.02443e-43" />
+<geometry>
+<mesh filename="package:///pied.stl"/>
+</geometry>
+<material name="pied_material">
+<color rgba="0.498039 0.498039 0.498039 1.0"/>
+</material>
+</collision>
+<inertial>
+<origin xyz="1.38778e-17 0.00897571 0.0698467" rpy="0 0 0"/>
+<mass value="1.52851" />
+<inertia ixx="0.00418338" ixy="-3.42427e-45"  ixz="-6.62155e-46" iyy="0.00459938" iyz="-3.279e-06" izz="0.00049942" />
+</inertial>
+</link>
+
+<joint name="roulis_cheville_droite" type="revolute">
+<origin xyz="0 -3e-05 7.5e-05" rpy="1.5708 -1.5708 0" />
+<parent link="rotule_pied_2" />
+<child link="pied_2" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="tangage_cheville_droite" type="revolute">
+<origin xyz="-2.60209e-17 0.32 0" rpy="-3.14159 1.2326e-32 -1.5708" />
+<parent link="tibias_2" />
+<child link="rotule_pied_2" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="genoux_droite" type="revolute">
+<origin xyz="-2.77556e-17 -0.33 -0.015" rpy="3.14159 1.5708 0" />
+<parent link="cuisse_2" />
+<child link="tibias_2" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="pivotx_hanche_droite" type="revolute">
+<origin xyz="0 0.0155 -0.01" rpy="1.5708 -4.49172e-31 3.14159" />
+<parent link="rotule_2_hanche_2" />
+<child link="cuisse_2" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="pivotz_hanche_droite" type="revolute">
+<origin xyz="1.38778e-17 -0.01 -0.01" rpy="1.5708 -1.5708 0" />
+<parent link="rotule_1_hanche_2" />
+<child link="rotule_2_hanche_2" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+<joint name="pivoty_hanche_droite" type="revolute">
+<origin xyz="0.0153735 -0.0874788 0.0280779" rpy="-1.5708 -0 6.93889e-17" />
+<parent link="hanche" />
+<child link="rotule_1_hanche_2" />
+<axis xyz="0 0 1"/>
+<limit effort="1" velocity="20" />
+<joint_properties friction="0.0"/>
+</joint>
+
+
+</robot>

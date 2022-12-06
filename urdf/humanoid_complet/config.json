@@ -1,0 +1,8 @@
+{
+    "documentId": "325b1e72cb778af7d1696d9e",
+    "outputFormat": "urdf",
+    "assemblyName":"robot_complexe",
+    "ignore":[
+        "Frame","rotule_1_hanche","rotule_2_hanche","rotule_pied"
+    ]
+}
